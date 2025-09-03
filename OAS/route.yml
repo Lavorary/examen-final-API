@@ -1,0 +1,60 @@
+openapi: 3.0.3
+info:
+  title: STD24046
+  description: "This is a specification of STD24046"
+  version: 1.0.0
+servers:
+  - url: 'https://8000'
+paths:
+  /ping:
+    get:
+      summary: retourner un texte brute pong
+      responses:
+        '200':
+          description: pong
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "pong"
+
+  /post_cars:
+    post:
+      summary: retourner une liste d'objet JSON sauvegardee en memoire
+      parameters:
+        - name: identifier
+          in: query
+          description: identifier
+          required: false
+          schema:
+            type: string
+            default: null
+
+        - name: brand
+          in: query
+          description: brand
+          required: false
+          schema:
+            type: string
+            default: null
+      responses:
+        '201':
+          description: Liste de cars
+          content:
+            application/json:
+              schema:
+                type: array
+
+
+  /get_cars:
+    get:
+      summary: recuperer la liste d'objet sauvegaree en memoire precedemment
+      responses:
+        '200':
+          description: Liste de cars sauvegardes
+          content:
+            application/json:
+              schema:
+                type: array
+
+  
