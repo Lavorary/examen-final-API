@@ -46,6 +46,14 @@ def cars(car_paylod: List[Cars]):
     return JSONResponse(content=serilized_car, status_code=201, media_type="application/json")
 
 
+@app.get("/cars")
+def cars_get():
+    return JSONResponse(content=cars_stored, status_code=200, media_type="application/json")
+
+
+
+
+
 
 
 
