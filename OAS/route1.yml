@@ -12,6 +12,11 @@ paths:
       responses:
         '200':
           description: pong
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "pong"
 
 
   
