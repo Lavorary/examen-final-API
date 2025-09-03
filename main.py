@@ -14,3 +14,15 @@ async def ping():
     return Response(content="pong", status_code=200, media_type="text/plain")
 
 
+class Characteristic(BaseModel):
+    max_speed: numbers.Number
+    min_speed: numbers.Number
+
+
+@app.post("/cars")
+async def cars():
+    identifier : str
+    brand : str
+    model : str
+    characteristics : Characteristic
+
