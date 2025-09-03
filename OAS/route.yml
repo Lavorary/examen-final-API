@@ -74,6 +74,19 @@ paths:
               schema:
                 type: array
 
+  /get_id_cars:
+    get:
+      summary: get cars by id
+      parameters:
+        - $ref: '#/components/parameters/Characterisctic'
+      responses:
+        '200' :
+          description: liste de cars avec id
+          content:
+            application//json:
+              schema:
+                type: array
+
 
 
   
