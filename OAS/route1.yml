@@ -1,0 +1,17 @@
+openapi: 3.0.3
+info:
+  title: STD24046
+  description: "This is a specification of STD24046"
+  version: 1.0.0
+servers:
+  - url: 'https://8000'
+paths:
+  /ping:
+    get:
+      summary: retourner un texte brute pong
+      responses:
+        '200':
+          description: pong
+
+
+  
